@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>1.You are given a string S, and your task is to return an array B  (having a size of 2), where B[0] contains the count of character A (uppercase) in string S and B]contains the count of character D (uppercase) in string S.</p>
+    <pre>
+        const countCharacters = (S) => 
+{
+   let countupperA=0;
+    let countupperD=0;
+    for(let i=0; i< S.length; i++){
+    if(S[i]=="A" )  {
+      countupperA++;
+    }
+    if(S[i] == "D") {
+      countupperD++ ;
+    }
+    
+   }
+   return [countupperA,countupperD];
+};
+Input
+AbaDd
+
+Output
+1 1
+    </pre>
+    <p>2.Tina is given a string  S which contains the first letter of all the student names in her class. She got a curiosity to check how many people have their names starting from the same alphabet. So given a string  S , she decided to write a code that finds out the count of characters that occur more than once in the string.</p>
+    <pre>
+        var Count_Occ = (s) => 
+{
+ let sot = sortString(s);
+let emt=" ";
+
+for(let i=0;i< sot.length-1;)
+     
+ {
+    let  count=1,temp;
+    
+    for(j=i+1;j < sot.length;j++){
+      
+    if(sot[i]==sot[j]){
+        count++;
+        
+    }
+    else{
+    temp=j;
+    break;
+    }
+      
+    }
+    if(count>1){
+    emt=emt+sot[i]+count;
+    }
+    i=temp;
+   
+    }
+    
+  return emt;
+     
+};
+
+function sortString(s) {
+    return s.split('').sort().join('');
+    
+}
+Input
+prepbytes
+
+Output
+ e2p2
+ </pre>
+<p>3.You are given a string S containing both uppercase and lowercase letters. You need to find out the number of vowels in the given string.
+  Note: You have to complete Count_Vowel function. No need to take any input.</p>
+<pre>
+var Count_Vowels= (S) => 
+{
+let count=0;
+let s= S.toLowerCase();
+for(let  i=0; i < s.length; i++){
+     
+if((s[i]=="a") || (s[i]=="e") || (s[i]=="i")  || (s[i]=="o" ) || (s[i]=="u" )){
+        
+  count++;
+}
+} 
+    return count;
+};
+Input
+Prepbytes
+
+Output
+2
+ </pre>
+ <p>4.You are given two strings S1 and S2 (containing both uppercase and lowercase letters), You need to retrun a string which is the concatenation of both the given strings. </p>
+ <pre>
+    var Concatenate_Strings = (S1, S2) => 
+{
+  let s3 =S1.concat(S2);
+  return s3;
+};
+Input
+Prep
+bytes
+
+Output
+Prepbytes
+ </pre>
+ <p>5.You are given a string S, and your task is to return the length of the string S.</p>
+ <pre>
+  const findLength = (S) => 
+{
+   
+  var p= 0;
+  for (var i=0;i< S.length;i++){
+    p++;
+  }
+  return p;
+};
+  Input
+CeDqe
+
+Output
+5
+ </pre>
+ <p>6.You are given a string  S  consisting of two letters  A  and  D ,where each character represent the winner of N games played between Aditya and Danish, where letter  A  represents the win of Aditya and letter  D represents the win of Danish. 
+    You need to find out the that which player wins the maximum number of games or there is a draw between the</p>
+  <pre>
+     
+var Game_Winner = (S) => 
+{
+let countA=0, countD=0;
+  for(let i=0;i < S.length;i++){
+       if(S[i]=="A"){
+         countA++;
+       }
+       else{
+         countD++;
+       }
+  }
+  
+  if(countA>countD){
+    return "Aditya";
+  }
+  else if(countD>countA){
+    return "Danish";
+  }
+  else{
+    return "Draw";
+  }  
+};
+Input
+ADDAAADDDDD
+
+Output
+Danish
+  </pre>  
+  <p>7.You are given two strings S and P, and your task is to concatenate them and return the concatenated string.</p>
+  <pre>
+    const joinStrings = (S, P) => 
+{
+    let join =(S+P);
+    return join;
+};
+Input
+PrepBytes Technologies
+
+Output
+PrepBytesTechnologies
+  </pre>
+  <p>8.You are given a string  S , Your task is to check wether the given string is a  P a l i n d r o m e  or not</p>
+  <pre>
+    var Palin_Check = (str) =>
+{
+	
+	var palindrome ="";
+	for(let i=str.length-1;i>=0; i--){
+	  palindrome =palindrome+ str.charAt(i);
+	  
+	}
+	if(palindrome === str){
+	  return "True";
+	}
+	else{
+	  return "False";
+	}
+};
+Input
+Naman
+
+Output
+False
+  </pre>
+  <p>9.You are given a string  S , Your task is to Reverse the string.String can contain both upppercase lowercase letters</p>
+  <pre>
+    var Reverse_String = (str) => 
+{
+   newstr ="";
+   for (let i= str.length-1;i>=0;i--){
+     newstr =newstr +str.charAt(i);
+   }
+   return newstr;
+};
+ 
+Input
+I am utkarsh raj
+
+Output
+jar hsraktu ma I
+  </pre>
+  <p>10.You are given two strings  S 1  and  S 2 , Your task is to print  YES  if both strings are same else print  N O .</p>
+  <pre>
+    var String_Match = (S1,S2) => 
+{
+  
+  if(S1===S2){
+    return "YES";
+  }
+  else{
+    return "NO";
+  }
+};
+Input
+Prepbytes
+Prepbytes
+
+Output
+YES
+ 
+  </pre>
+  <p>11.You are given a string S, along with a pattern string and a text string. You need to repalce the pattern string in S to the text string.<p>
+    <pre>
+        var Replace = (S, pattern , text) => 
+{
+    let x= S.replace(pattern,text);
+    return x;
+};
+Input
+Hi, I am You.
+You
+Prepbytes
+
+Output
+Hi, I am Prepbytes.
+    </pre>
+  <p>12.You are given a string S, Your task is to split the string with respect to spaces.
+    
+    Note: You have to complete Split_the_String function. No need to take any input.</p>
+    <pre>
+        var Split_the_string = (S) => 
+{
+  let str='\n';
+  let x=S.split(str);
+  return x;
+        
+};
+Input
+I am utkarsh raj
+
+Output
+I am utkarsh raj
+    </pre>
+    <p>13.You are given a string S containing both uppercase and lowercase letters. You need to find out the number of vowels and the number of consonants in the given string.</p>
+    <pre>
+      var Count_Vowels= (S) => 
+{
+  count=0;
+   for (let i =0 ; i < S.length ; i++ ) {
+if (S.charAt(i) === 'a' || S.charAt(i) === 'A' || S.charAt(i) === 'e' || S.charAt(i) === 'E' || S.charAt(i) === 'i' || S.charAt(i) === 'I'
+ || S.charAt(i) === 'o' || S.charAt(i) === 'O' || S.charAt(i) === 'u' ||  S.charAt(i) === 'U'){
+ count = count +1 ;
+ }
+ }
+  return count; 
+ 
+      
+};
+var Count_Consonants= (S) => 
+{
+  let count1 =0 ;
+for (let i =0 ; i < S.length ; i++ ) {
+if (S.charAt(i) === 'a' || S.charAt(i) === 'A' || S.charAt(i) === 'e' || S.charAt(i) === 'E' || S.charAt(i) === 'i' || S.charAt(i) === 'I'
+|| S.charAt(i) === 'o' || S.charAt(i) === 'O' || S.charAt(i) === 'u' ||  S.charAt(i) === 'U'){
+ count1 = count1 +1 ;
+ }
+ }
+ return S.length- count1;
+       
+};
+Input
+Prepbytes
+
+Output
+2
+7
+
+    </pre>
+</body>
+</html>
